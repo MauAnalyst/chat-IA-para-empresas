@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sup. Sistemas - IA</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <div class="menu">
+        <div class="perfil">
+            <img src="./perfil.jpg" alt="logo do grupoSC">
+            <div class="descricao">
+                <p>Suporte Sistemas IA</p>
+                <p>online</p>
+            </div>
+        </div>
+        <!--<span class="material-symbols-outlined" id="deleteChat">delete</span>-->
+        <div id="deleteChat"><span class="material-symbols-outlined">delete</span>Delete Chat</div>
+        
+    </div>
+    <div class="chat">
+        <!--<h2>Histórico de Perguntas e Respostas:</h2>-->
+        <div class="blocoHistorico">
+            <div id="historico">
+                <div id="loading">
+                    <div class="loader">
+                        <li class="ball"></li>
+                        <li class="ball"></li>
+                        <li class="ball"></li>
+                    </div>
+                </div>
+            </div>
+            <div class="msgm-initial">
+                <img src="./perfil.jpg" alt="logo do grupoSC">
+                <h2>Qual seria sua pergunta ?</h2>
+            </div>
+        </div>
+
+        <form id="iaForm">
+            <!--<label for="pergunta">Digite sua pergunta:</label><br><br>-->
+            <input type="text" id="pergunta" name="pergunta" required placeholder="Escreva aqui">
+            <button type="submit" id="buttoEnv"><span class="material-symbols-outlined">arrow_forward</span></button>
+        </form>
+
+        <!--<h2>Resposta da IA:</h2>-->
+        <p id="respostaIA"></p>
+    </div>
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>

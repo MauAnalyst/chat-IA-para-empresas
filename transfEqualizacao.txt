@@ -1,0 +1,205 @@
+Transferencia de Equaliza��o � Origem CD com WM e destino CD com WM
+1.	Pedido de compras � ME21N	2
+2.	Remessa - VL10B	3
+3.	Acelerador de Picking - ZWM0185P	5
+4.	Ajuste remessas de transfer�ncia - ZTRNMM004	5
+5.	Ajuste Lote Remessas de Transfer�ncia - ZWM0138P	7
+6.	Sa�da de mercadoria � VL02N	7
+7.	Recebimento da mercadoria no CD Final.	9
+7.1	Relat�rio para recebimento - ZMM031P	9
+7.2	Entrada NF � Recebimento - ZMM0116NP	10
+7.3	Valida��o Fiscal � ZMM0191	11
+7.4	Minuta de Recebimento - ZMM0564P	12
+7.5	Conferencia da mercadoria � ZCD0012P	14
+
+
+   1. Pedido de compras � ME21N
+
+Criar o pedido de compras pela transa��o ME21N com o time ZUEQ
+Cabe�alho do pedido
+Tipo do Pedido: ZUEQ
+Centro Fornecedor: (XX01)
+Informar os dados organizacionais do pedido
+Informar o c�digo do centro Fornecedor
+
+S�ntese do item do pedido:
+C�digo do material
+Quantidade:
+Centro destino:
+Dep�sito: 001
+
+
+
+
+
+
+
+
+
+
+
+Detalhe do item:
+Aba: Fornecimento: Flegar todos os itens como X Controle de qualidade
+
+
+Ao gravar o pedido ser� registrado: 7605007260
+
+   2. Remessa - VL10B
+
+Na aba Pedido informar nosso pedido de compras
+Os demais dados apagar
+Clicar para processar: F8
+
+Selecionar o registro e clicar em Background
+
+Ao clicar o sistema ir� gerar uma segunda linha:
+
+Clicar no pedido, o hyperlink ir� direcionar para a transa��o ME23N
+Remessa gerada: XXXXXXX
+
+
+
+   3. Acelerador de Picking - ZWM0185P
+
+Informar o dep�sito da remessa e n�mero da remessa, clicar para processar:
+
+Picking gerado com sucesso:
+
+
+   4. Ajuste remessas de transfer�ncia - ZTRNMM004
+
+Acessar a transa��o ZTRNMM004
+Informar os dados da remessa para ajuste do fornecedor / Transporte
+Data da remessa: Data em que a remessa foi criada
+Local de expedi��o: Local do CD de origem (Caso n�o localize, buscar na tabela LIKP).
+Tipo de remessa: ZTFI (Caso n�o localize, buscar na tabela LIKP).
+N�mero da remessa:
+Clicar para executar: 
+
+
+Informar o c�digo do fornecedor e clicar para executar: 
+Para saber o fornecedor, buscar da tabela ZBRTB_SDLES00042 com o centro de origem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+   5. Ajuste Lote Remessas de Transfer�ncia - ZWM0138P
+
+Acessar a transa��o ZWM0138P e informar os dados da remessa e clicar para processar:
+
+
+
+   6. Sa�da de mercadoria � VL02N
+
+Informar a remessa e clicar em Registrar SM
+
+
+
+Obs: Executar a transa��o / ZIMPRIMENFE e  ZSD0171 para retorno da nota fiscal
+
+
+
+Acessar a remessa:
+Clicar no fluxo de documentos
+
+
+Documento de sa�da de mercadorias:
+
+
+   7. Recebimento da mercadoria no CD Final.
+
+7.1 Relat�rio para recebimento - ZMM031P
+
+Informar:
+Centro Origem: RJ01
+Centro Destino: SP60
+N�mero do pedido
+
+
+
+7.2 Entrada NF � Recebimento - ZMM0116NP
+
+Informar a nota de transferencia com a s�rie e pedido, clicar em (Nota transferencia)
+
+Dados gerados
+
+
+
+7.3 Valida��o Fiscal � ZMM0191
+
+Informar o centro recebedor
+Numero da remessa
+Flegar em NFs Pendentes
+Clicar para executar:
+
+
+Selecionar o registro e clicar em Validar
+
+
+
+
+
+7.4 Minuta de Recebimento - ZMM0564P
+
+Informar os dados para realizar a minuta de recebimento:
+Data de lan�amento
+Transportadora
+Centro recebedor
+Numero do pedido
+
+
+Selecionar o registro e clicar em processar
+
+Informar o n�mero de acompanhamento e clicar em gravar
+
+Realizar a impress�o:
+
+
+
+Minuta gerada:
+
+
+
+
+7.5 Conferencia da mercadoria � ZCD0012P
+
+- Parametrizado no dep�sito do cd recebedor:
+Transa��o LM01
+1 - Recebimento:
+
+
+2  - Remanejamento:
+
+
+Informar a remessa de sa�da do cd de RJ01
+
+Ler o ean do produto e clicar em avan�ar
+
+Realizar a leitura conforme o saldo do produto
+
+
+Finaliza��o da conferencia
+
+Recebimento conclu�do:
+
+
+Clicar para imprimir as etiquetas
+
+Informar a impressora e teclar enter
+
+
+Fim do processo MM.
+1
+
+
+
+

@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #2d313b; 
+    background: linear-gradient(to bottom, #363c45,#2d313b);
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+/* --- menu --- */
+
+.menu {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    /*background-color: #363c45; */
+    background: rgb(54, 60, 69, 0.5);
+    backdrop-filter: blur(50px);
+    background: #23262f;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.menu .perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu .perfil .descricao p:nth-child(2) {
+    color: #636a7f;
+}
+
+.menu img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+#deleteChat {
+    background-color: transparent;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+#deleteChat:hover {
+    background-color: rgb(48, 48, 48);
+    background-color: black;
+}
+
+/* historico do chat */
+
+.chat {
+    position: relative;
+    width: 60%;
+    margin: auto;
+    /*background-color: #fff; */
+    padding: 20px;
+}
+
+.blocoHistorico {
+    padding: 30px 15px;
+    height: 445px;
+    overflow-y: scroll;
+}
+
+.blocoHistorico::-webkit-scrollbar {
+    width: 15px;
+}
+.blocoHistorico::-webkit-scrollbar-track {
+    background-color: #23262f;
+    border-radius: 20px;
+}
+.blocoHistorico::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 20px;
+}
+
+#historico div {
+    margin: 15px 0px;
+    font-size: 15px;
+}
+
+.blocoHistorico .msgm-initial {
+    text-align: center;
+}
+
+.blocoHistorico .msgm-initial img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.blocoHistorico .msgm-initial h2 {
+    color: #7f8696;
+}
+
+.blocoHistorico #blocoUser {
+    border-radius: 0px 10px 10px 10px; 
+    padding: 10px 15px;
+    background-color: #444a5a;
+}
+
+.blocoHistorico #blocoIA {
+    padding: 10px 15px;
+    position: relative;
+    color: #fff;
+    /*border-radius: 2px 20px 20px 20px;
+    background-color: #4f5e87; */
+} 
+/* ----- barra de conversa */
+
+#iaForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #444a5a;
+    margin-top: 10px;
+    padding: 3px 5px;
+    padding-left: 15px;
+    border-radius: 25px;
+}
+
+#iaForm #pergunta {
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    background-color: #444a5a;
+    color: #fff;
+}
+
+#iaForm #pergunta:focus {
+    outline: none;
+}
+
+#iaForm #buttoEnv {
+    background-color: #fff;
+    border-radius: 50%;
+    border: none;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+#iaForm #buttoEnv:hover {
+    background-color: #4f5e87;
+    color: #fff;
+}
+
+#iaForm #buttoEnv span {
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+
+@media screen and (max-width: 950px) {
+    .chat {
+        width: 90%;
+    }
+}
+
+
+
+/*--------------- load ------------- */
+/* From Uiverse.io by ashish-yadv */ 
+
+#loading {
+    width: 10%;
+    padding: 0.5px;
+    color: #fff;
+    border-radius: 2px 20px 20px 20px;
+}
+
+
+.loader {
+    width: 60px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .ball {
+    list-style: none;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  
+  .ball:nth-child(1) {
+    animation: bounce-1 2.1s ease-in-out infinite;
+  }
+  
+  @keyframes bounce-1 {
+    50% {
+      transform: translateY(-14px);
+    }
+  }
+  
+  .ball:nth-child(2) {
+    animation: bounce-3 2.1s ease-in-out 0.3s infinite;
+  }
+  
+  @keyframes bounce-2 {
+    50% {
+      transform: translateY(-14px);
+    }
+  }
+  
+  .ball:nth-child(3) {
+    animation: bounce-3 2.1s ease-in-out 0.6s infinite;
+  }
+  
+  @keyframes bounce-3 {
+    50% {
+      transform: translateY(-14px);
+    }
+  }
+
+  
